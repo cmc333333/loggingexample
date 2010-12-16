@@ -1,4 +1,4 @@
-package code {
+package info.cmlubinski.loggingexample {
 package lib {
 
 import net.liftweb._
