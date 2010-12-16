@@ -4,6 +4,7 @@ import net.liftweb.common._
 import net.liftweb.actor._
 import net.liftweb.http._
 import net.liftweb.json.JsonAST._
+import net.liftweb.mongodb.{MongoDB, DefaultMongoIdentifier, JObjectParser}
 
 class RespLogger(req:Req, start:Long) extends SpecializedLiftActor[RespLogger.LoggerMsg] {
   override protected def messageHandler = {
