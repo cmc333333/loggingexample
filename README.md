@@ -1,6 +1,6 @@
 # Logging @ Toodalu
 
-CM Lubinski
+[CM Lubinski][0]
 
 12/16/10
 
@@ -115,6 +115,7 @@ Examples:
   * We don't want to store user passwords ... anywhere
 
 
+[0]: http://cmlubinski.info "CM Lubinski"
 [1]: https://github.com/cmc333333/loggingexample "Github"
 [2]: https://github.com/cmc333333/loggingexample/blob/master/src/main/scala/loggingexample/lib/RestDispatch.scala "Dispatcher"
 [3]: https://github.com/cmc333333/loggingexample/blob/master/src/main/scala/loggingexample/lib/RespLogger.scala "Logger"
