@@ -9,22 +9,22 @@ import net.liftweb.json.JsonDSL._
 object RestDispatch extends RestHelper {
   serve {
     case req@Req("api" :: _, _, httpMethod) => {
-      val logger = new RespLogger(req, System.currentTimeMillis)
+      val startTime = System.currentTimeMillis
       //  Logger may be on a different thread by the time params are processed; force evaluation now
       req.params
 
       dispatch(req) match {
         case response@Full(json) => {
-          logger ! RespLogger.End(json, System.currentTimeMillis)
+          RespLogger ! Success(req, json, startTime, System.currentTimeMillis)
           response
         }
         case response@Empty => {
-          logger ! RespLogger.FourOhFour(System.currentTimeMillis)
+          RespLogger ! FourOhFour(req, startTime, System.currentTimeMillis)
           () => response
         }
         case Failure(msg, _, _) => {
           val response = ("status" -> "failure") ~ ("reason" -> msg)
-          logger ! RespLogger.Failure(response, System.currentTimeMillis)
+          RespLogger ! Fail(req, response, startTime, System.currentTimeMillis)
           Full(response)
         }
       }
