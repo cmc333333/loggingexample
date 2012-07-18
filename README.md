@@ -2,9 +2,9 @@
 
 [CM Lubinski][0]
 
-12/16/10
+[CASE 12/16/10][1]
 
-[Github][1]
+[Github][2]
 
 ---
 
@@ -86,7 +86,7 @@ Examples:
 
 ---
 
-## [Dispatcher][2]
+## [Dispatcher][3]
 
 * Handles everything beginning with "api"
 * Creates new log actor
@@ -96,7 +96,7 @@ Examples:
 
 ---
 
-## [Log Actor][3]
+## [Log Actor][4]
 
 * Listens for specific messages re: outcome
 * Compiles fields from the request and the response
@@ -116,7 +116,7 @@ Examples:
 
 
 [0]: http://cmlubinski.info "CM Lubinski"
-[1]: https://github.com/cmc333333/loggingexample "Github"
-[2]: https://github.com/cmc333333/loggingexample/blob/master/src/main/scala/loggingexample/lib/RestDispatch.scala "Dispatcher"
-[3]: https://github.com/cmc333333/loggingexample/blob/master/src/main/scala/loggingexample/lib/RespLogger.scala "Logger"
-
+[1]: http://www.meetup.com/chicagoscala/events/14793843/
+[2]: https://github.com/cmc333333/loggingexample "Github"
+[3]: https://github.com/cmc333333/loggingexample/blob/master/src/main/scala/loggingexample/lib/RestDispatch.scala "Dispatcher"
+[4]: https://github.com/cmc333333/loggingexample/blob/master/src/main/scala/loggingexample/lib/RespLogger.scala "Logger"
